@@ -1,5 +1,7 @@
 import { Component } from 'react';
 
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+
 import { Container, TitleContacts, TitleForm } from './App.styled';
 import { nanoid } from 'nanoid';
 import { ContactList } from './ContactList/ContactList';
@@ -33,7 +35,7 @@ export class App extends Component {
     const { contacts } = this.state;
     const existingContact = contacts.find(contact => contact.name === name);
     if (existingContact) {
-      alert(`${name} is already in contacts.`);
+      Notify.warning(`${name} is already in contacts.`, { timeout: 1500 });
       return;
     }
     const newContact = { id: nanoid(), name, number };
