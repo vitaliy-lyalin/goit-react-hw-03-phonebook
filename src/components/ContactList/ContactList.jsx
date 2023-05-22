@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  ContactListIntem,
+  ContactListItem,
   ContactListWrapper,
   DeleteContactButton,
 } from './ContactList.styled';
@@ -12,7 +12,7 @@ export const ContactList = ({ contacts, onDeleteContact }) => {
   return (
     <ContactListWrapper>
       {contacts.map(({ id, name, number }) => (
-        <ContactListIntem key={id}>
+        <ContactListItem key={id}>
           <span>{name}: </span>
           <span>{number}</span>
           <DeleteContactButton
@@ -21,7 +21,7 @@ export const ContactList = ({ contacts, onDeleteContact }) => {
           >
             Delete
           </DeleteContactButton>
-        </ContactListIntem>
+        </ContactListItem>
       ))}
     </ContactListWrapper>
   );

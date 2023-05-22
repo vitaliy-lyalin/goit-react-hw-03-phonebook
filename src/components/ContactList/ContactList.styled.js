@@ -5,7 +5,7 @@ export const ContactListWrapper = styled.ul`
   flex-direction: column;
 `;
 
-export const ContactListIntem = styled.li`
+export const ContactListItem = styled.li`
   display: flex;
   justify-content: space-between;
   align-items: center;
