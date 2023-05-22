@@ -14,7 +14,7 @@ export const ContactListIntem = styled.li`
   border-radius: 3px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 
-  &: hover {
+  &:hover {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   }
 `;
